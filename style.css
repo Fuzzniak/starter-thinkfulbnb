@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  display: grid
 }
 
 h2 {
@@ -31,7 +32,17 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
+}
+
+.about-img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.host-img {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* ---  Groups & Items --- */
@@ -48,6 +59,7 @@ main img {
 
 .item-double {
   flex: 2;
+  margin: 10px;
 }
 
 /* -------  Navigation ------- */
@@ -59,10 +71,18 @@ header {
 }
 
 .logo {
+  display: flex;
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+  justify-content: center;
 }
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+
 
 header nav ul li {
   list-style-type: none;
@@ -81,6 +101,9 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
   border: 2px solid #ff385c;
   padding: 10px;
 }
@@ -117,3 +140,67 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 48px;
+    padding-left: 5px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .search-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  button {
+    justify-content: center;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item button,
+  .item input,
+  .item label,
+  .item select {
+    display: flex;
+    width: 100%;
+  }
+
+  .item {
+    flex: 1;
+    margin: 10px;
+  }
+
+  .item-double {
+    flex: 2;
+    margin: 10px;
+  }
+
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
