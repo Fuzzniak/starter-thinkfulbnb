@@ -81,6 +81,7 @@ header {
 header nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 
@@ -100,10 +101,16 @@ header nav ul li a:hover {
 }
 
 /* -------  Search Form ------- */
+
+.search-input {
+  display: flex;
+  justify-content: space-around;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content:center;
   border: 2px solid #ff385c;
   padding: 10px;
 }
